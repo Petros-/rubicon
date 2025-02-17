@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home'
 import ThingDetail from './ThingDetail'
 import NewThing from './NewThing'
+import EditThing from './EditThing'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/thing/:id" element={<ThingDetail />} />
         <Route path="/new" element={<NewThing />} />
+        <Route path="/edit/:id" element={<EditThing />} />
       </Routes>
     </BrowserRouter>
   )

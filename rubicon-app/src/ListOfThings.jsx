@@ -45,6 +45,7 @@ function ListOfThings () {
             {things.map(thing => (
                 <div key={thing.id}>
                     <Link to={`/thing/${thing.id}`}>{thing.title}</Link>{thing.description}
+                    <Link to={`/edit/${thing.id}`}><button>Edit</button></Link>
                     <button onClick={() => handleDelete(thing.id)}>Delete</button>
                 </div>
             ))}
